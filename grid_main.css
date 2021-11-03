@@ -1,0 +1,295 @@
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
+body {
+    width: auto;
+}
+
+.grid-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+
+/*=============================================
+=                  Container                  =
+=============================================*/
+
+/* Container Widths: 
+       wide_16 => 16 cells wide (60px per cell)
+       wide_12 => 12 cells wide (80px per cell)
+       wide_8 => 8 cells wide (120px per cell)
+*/
+
+.wide_16,
+.wide_12,
+.wide_8 {
+    display: grid;
+    grid-auto-flow: dense;
+    justify-items: stretch;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+@media (min-width: 960px) {
+    body {
+        min-width: 960px;
+    }
+
+    .wide_16,
+    .wide_12,
+    .wide_8 {
+        width: 960px;
+    }
+}
+
+/*----------  Container Columns  ----------*/
+
+.wide_16 {
+    grid-auto-rows: minmax(60px, max-content);
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.wide_12 {
+    grid-auto-rows: minmax(80px, max-content);
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.wide_8 {
+    grid-auto-rows: minmax(120px, max-content);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (min-width: 960px) {
+    .wide_16 {
+        grid-auto-rows: minmax(60px, max-content);
+        grid-template-columns: repeat(16, 1fr);
+    }
+    
+    .wide_12 {
+        grid-auto-rows: minmax(80px, max-content);
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
+    .wide_8 {
+        grid-auto-rows: minmax(120px, max-content);
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+
+
+
+/*=====         End of Container       ======*/
+
+
+/*=============================================
+=                 Grid Cells                  =
+=============================================*/
+
+
+/* Cell Sizes:
+       .cell {horizontal size}--{vertical size}
+       .cell default size === 1x1
+*/
+
+.cell {
+    margin: 2px 2px 0 0;
+    grid-column: auto / span 1;
+    grid-row: auto / span 1
+}
+
+.two-h {
+    grid-column: auto / span 2;
+}
+
+.three-h {
+    grid-column: auto / span 3;
+}
+
+.four-h {
+    grid-column: auto / span 4;
+}
+
+.five-h {
+    grid-column: auto / span 5;
+}
+
+.six-h {
+    grid-column: auto / span 6;
+}
+
+.seven-h {
+    grid-column: auto / span 7;
+}
+
+.eight-h {
+    grid-column: auto / span 8;
+}
+
+.nine-h {
+    grid-column: auto / span 9;
+}
+
+.ten-h {
+    grid-column: auto / span 10;
+}
+
+.eleven-h {
+    grid-column: auto / span 11;
+}
+
+.twelve-h {
+    grid-column: auto / span 12;
+}
+
+.thirteen-h {
+    grid-column: auto / span 13;
+}
+
+.fourteen-h {
+    grid-column: auto / span 14;
+}
+
+.fifteen-h {
+    grid-column: auto / span 15;
+}
+
+.sixteen-h {
+    grid-column: auto / span 16;
+}
+
+.one-v {
+    grid-row: auto / span 1;
+}
+
+.two-v {
+    grid-row: auto / span 2;
+}
+
+.three-v {
+    grid-row: auto / span 3;
+}
+
+.four-v {
+    grid-row: auto / span 4;
+}
+
+.five-v {
+    grid-row: auto / span 5;
+}
+
+.six-v {
+    grid-row: auto / span 6;
+}
+
+.seven-v {
+    grid-row: auto / span 7;
+}
+
+.eight-v {
+    grid-row: auto / span 8;
+}
+
+.nine-v {
+    grid-row: auto / span 9;
+}
+
+.ten-v {
+    grid-row: auto / span 10;
+}
+
+.eleven-v {
+    grid-row: auto / span 11;
+}
+
+.twelve-v {
+    grid-row: auto / span 12;
+}
+
+.thirteen-v {
+    grid-row: auto / span 13;
+}
+
+.fourteen-v {
+    grid-row: auto / span 14;
+}
+
+.fifteen-v {
+    grid-row: auto / span 15;
+}
+
+.sixteen-v {
+    grid-row: auto / span 16;
+}
+
+
+/*=====        End of Grid Cells       ======*/
+
+
+/*=============================================
+=               Testing Classes               =
+=============================================*/
+
+.fill-1,
+.fill-2,
+.fill-3,
+.fill-4,
+.fill-5,
+.fill-6,
+.fill-7,
+.fill-8 {
+    align-items: center;
+    display: flex;
+    font-size: 1.6rem;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.fill-1 {
+    background-color: #3f4;
+    color: #000;
+}
+
+.fill-2 {
+    background-color: #425;
+    color: #fff;
+}
+
+.fill-3 {
+    background-color: #e01;
+    color: #000;
+}
+
+.fill-4 {
+    background-color: #f94;
+    color: #000;
+}
+
+.fill-5 {
+    background-color: #049;
+    color: #fff;
+}
+
+.fill-6 {
+    background-color: #324;
+    color: #fff;
+}
+
+.fill-7 {
+    background-color: #9df;
+    color: #000;
+}
+
+.fill-8 {
+    background-color: #840;
+    color: #000;
+}
+
+/*=====     End of Testing Classes     ======*/
+
